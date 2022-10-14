@@ -1,0 +1,41 @@
+<div class="he">
+  {% for block in section.blocks %}
+    {% assign item = block.settings %}
+    <h5>{{ item.sst }}{{ item.title }} {{ item.price }}</h5>
+  {% endfor %}
+</div>
+{% schema %}
+  {
+    "name": "product",
+    "blocks": [
+      {
+        "name": "giang",
+        "type": "title",
+        "settings":[
+          {
+            "type":"text",
+            "id":"sst",
+            "label":"sst"
+          },
+          {
+            "type":"text",
+
+            "label":"title",
+            "id":"title"
+          },
+          {
+            "type":"text",
+            "label": "price",
+            "id":"price"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
